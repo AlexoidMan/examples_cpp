@@ -22,7 +22,7 @@ set(cor_headers
     "src/coroutine/coro.hpp"
     "src/coroutine/corotask.hpp"
     "src/coroutine/corotaskpromise.hpp"
-)
+) 
 
 
 add_executable(coro_main1 ${cor_sources} ${cor_headers} )
@@ -30,11 +30,17 @@ target_include_directories(coro_main1 PUBLIC include)
 
 add_executable(cororange "src/coroutine/cororange.cpp" "src/coroutine/cororange.hpp" "src/coroutine/generator.hpp") 
 
+add_executable(coroYieldBack "src/coroutine/coroyieldback.cpp" "src/coroutine/coroyieldback.hpp" "src/coroutine/corogenback.hpp" "src/coroutine/backawaiter.hpp" ) 
+
 # move semantics
 add_executable(emplace_copy "src/move/emplace_copy.cpp") 
 
 # templates semantics
 add_executable(template_variadic "src/templates/template_variadic.cpp") 
+
+# concurrent 
+add_executable(quickSort_parallel "src/concurrent/quickSort_parallelized.cpp")
+add_executable(promise_test "src/concurrent/promise.cpp")
 
 #set_target_properties(hello PROPERTIES PUBLIC_HEADER "include/hello.h")
 install(TARGETS coro_main1)
