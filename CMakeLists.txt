@@ -12,7 +12,20 @@ project(C++_examples CXX)
 set(CMAKE_BUILD_TYPE Debug)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_CXX_EXTENSIONS ON)
+
+#Boost requirements
+set(Boost_USE_STATIC_LIBS OFF)
+set(Boost_USE_MULTITHREADED ON)
+set(Boost_USE_STATIC_RUNTIME OFF)
+find_package(Boost COMPONENTS thread system REQUIRED)
+include_directories(${Boost_INCLUDE_DIR})
+# Found libraries saved to Boost_LIBRARIES variable
+link_directories(${Boost_LIBRARY_DIR})
+
+#common
+find_package (Threads)
+
 
 set(cor_sources
     "src/coroutine/coro_main1.cpp"
@@ -41,6 +54,16 @@ add_executable(template_variadic "src/templates/template_variadic.cpp")
 # concurrent 
 add_executable(quickSort_parallel "src/concurrent/quickSort_parallelized.cpp")
 add_executable(promise_test "src/concurrent/promise.cpp")
+add_executable(future_exp_test "src/concurrent/future.cpp")
+target_link_libraries(future_exp_test  Boost::thread)
+#target_link_libraries(future_exp_test  ${Boost_LIBRARY_DIR})
+
+# metaprogramming
+add_executable(declval_ex1 "src/metaprogramming/declval.cpp")
+add_executable(container_polymorphic "src/metaprogramming/container_polymorphic.cpp")
+
+# patterns
+add_executable(abstract_factory "src/patterns/abstract_factory.cpp")
 
 #set_target_properties(hello PROPERTIES PUBLIC_HEADER "include/hello.h")
 install(TARGETS coro_main1)
