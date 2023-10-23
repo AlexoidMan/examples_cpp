@@ -65,5 +65,8 @@ add_executable(container_polymorphic "src/metaprogramming/container_polymorphic.
 # patterns
 add_executable(abstract_factory "src/patterns/abstract_factory.cpp")
 
+# tasks
+add_subdirectory("src/tasks")
+
 #set_target_properties(hello PROPERTIES PUBLIC_HEADER "include/hello.h")
 install(TARGETS coro_main1)

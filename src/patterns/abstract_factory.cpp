@@ -118,7 +118,7 @@ int main(int argc, char** argv)
 
     create_product(factory1);
     create_product(factory2);
-
+    
     std::cout << std::endl;
     return 0;
 }
