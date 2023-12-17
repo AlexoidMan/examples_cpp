@@ -68,5 +68,8 @@ add_executable(abstract_factory "src/patterns/abstract_factory.cpp")
 # tasks
 add_subdirectory("src/tasks")
 
+# jthread
+add_subdirectory("src/jthread")
+
 #set_target_properties(hello PROPERTIES PUBLIC_HEADER "include/hello.h")
 install(TARGETS coro_main1)
