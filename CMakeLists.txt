@@ -48,9 +48,6 @@ add_executable(coroYieldBack "src/coroutine/coroyieldback.cpp" "src/coroutine/co
 # move semantics
 add_executable(emplace_copy "src/move/emplace_copy.cpp") 
 
-# templates semantics
-add_executable(template_variadic "src/templates/template_variadic.cpp") 
-
 # concurrent 
 add_executable(quickSort_parallel "src/concurrent/quickSort_parallelized.cpp")
 add_executable(promise_test "src/concurrent/promise.cpp")
@@ -70,6 +67,9 @@ add_subdirectory("src/tasks")
 
 # jthread
 add_subdirectory("src/jthread")
+
+# templates semantics
+add_subdirectory("src/templates") 
 
 #set_target_properties(hello PROPERTIES PUBLIC_HEADER "include/hello.h")
 install(TARGETS coro_main1)
