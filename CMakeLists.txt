@@ -69,7 +69,10 @@ add_subdirectory("src/tasks")
 add_subdirectory("src/jthread")
 
 # templates semantics
-add_subdirectory("src/templates") 
+add_subdirectory("src/templates")
+
+# iterators
+add_subdirectory("src/iterator") 
 
 #set_target_properties(hello PROPERTIES PUBLIC_HEADER "include/hello.h")
 install(TARGETS coro_main1)
