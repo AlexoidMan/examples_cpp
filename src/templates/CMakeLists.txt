@@ -12,6 +12,8 @@ project(templates_examples)
 add_executable(template_variadic template_variadic.cpp )
 add_executable(template_partial template_partial.cpp )
 add_executable(template_template_parameter template_template_parameter.cpp )
+add_executable(template_variadic_lambdas template_variadic_lambdas.cpp )
+
 #add_executable(ex2 ex2.cpp )
 #target_include_directories(template_variadic PUBLIC include)
 
