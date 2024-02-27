@@ -13,12 +13,22 @@ class ExamplesCppRecipe(ConanFile):
 
     def requirements(self):
         self.requires("boost/1.82.0")
+        self.requires("benchmark/1.8.3")
+    
+#    def layout(self):
+#        # We make the assumption that if the compiler is msvc the
+#        # CMake generator is multi-config
+#        if self.settings.get_safe("compiler") == "msvc":
+#            multi = True
+#        else:
+#            multi = False          
 
-    def layout(self):
-        cmake_layout(self)
+#        self.folders.build = "build" if multi else f"build/{str(self.settings.build_type)}"
+#        self.folders.generators = "build"
+#        cmake_layout(self)
         
     def build(self):
         cmake = CMake(self)
         cmake.configure()
-        cmake.build()
+        cmake.build()     
 

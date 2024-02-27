@@ -1,14 +1,14 @@
 #include <vector>
-#include <thread>
-#include <future>
-#include <numeric>
 #include <iostream>
-#include <chrono>
+//#include <chrono>
 #include <syncstream>
 
 #define BOOST_THREAD_PROVIDES_FUTURE
 #define BOOST_THREAD_PROVIDES_FUTURE_CONTINUATION
+#define BOOST_THREAD_PROVIDES_FUTURE_UNWRAP
+#define BOOST_THREAD_PROVIDES_FUTURE_WHEN_ALL_WHEN_ANY
 
+#include <boost/thread.hpp>
 #include <boost/thread/future.hpp>
 
 int main(int argc, char** argv)
