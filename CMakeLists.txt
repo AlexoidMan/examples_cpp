@@ -77,12 +77,16 @@ add_executable(container_polymorphic "src/metaprogramming/container_polymorphic.
 
 # patterns
 
-message(STATUS ${benchmark_INCLUDE_DIRS})
-message(STATUS ${benchmark_LIBRARIES})
+#message(STATUS ${benchmark_INCLUDE_DIRS})
+#message(STATUS ${benchmark_LIBRARIES})
 add_executable(abstract_factory "src/patterns/abstract_factory.cpp")
 add_executable(type_erasure "src/patterns/type_erasure.cpp")
 #target_link_libraries(type_erasure  PUBLIC benchmark)
 target_link_libraries(type_erasure  PUBLIC benchmark)
+
+add_executable(crtp_generic_interfaces "src/patterns/CRTP_generic_interfaces.cpp")
+add_executable(crtp_policy_design "src/patterns/CRTP_policy_designed.cpp")
+add_executable(crtp_template_policy "src/patterns/CRTP_policy_template_designed.cpp")
 
 
 # tasks
