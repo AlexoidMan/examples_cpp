@@ -81,13 +81,26 @@ add_executable(container_polymorphic "src/metaprogramming/container_polymorphic.
 #message(STATUS ${benchmark_LIBRARIES})
 add_executable(abstract_factory "src/patterns/abstract_factory.cpp")
 add_executable(type_erasure "src/patterns/type_erasure.cpp")
-#target_link_libraries(type_erasure  PUBLIC benchmark)
 target_link_libraries(type_erasure  PUBLIC benchmark)
 
 add_executable(crtp_generic_interfaces "src/patterns/CRTP_generic_interfaces.cpp")
 add_executable(crtp_policy_design "src/patterns/CRTP_policy_designed.cpp")
 add_executable(crtp_template_policy "src/patterns/CRTP_policy_template_designed.cpp")
 
+add_executable(fluent_builder "src/patterns/fluentBuilder.cpp")
+add_executable(implicit_builder "src/patterns/implicitBuilder.cpp")
+add_executable(fluent_builder_hierarchy "src/patterns/fluentBuilderHierarchy.cpp")
+
+add_executable(localBufferOpt "src/patterns/LBO.cpp")
+add_executable(localBufferOpt_vector "src/patterns/LBO_vector.cpp")
+target_link_libraries(localBufferOpt  PUBLIC benchmark)
+target_link_libraries(localBufferOpt_vector  PUBLIC benchmark)
+
+add_executable(scope_guard "src/patterns/scope_guard.cpp")
+#add_executable(scope_guard_te "src/patterns/scope_guard_te.cpp")
+
+add_executable(factory "src/patterns/FactoryPattern.cpp")
+add_executable(factory_serialization "src/patterns/Factory_serialization.cpp")
 
 # tasks
 add_subdirectory("src/tasks")
