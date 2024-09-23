@@ -102,6 +102,11 @@ add_executable(scope_guard "src/patterns/scope_guard.cpp")
 add_executable(factory "src/patterns/FactoryPattern.cpp")
 add_executable(factory_serialization "src/patterns/Factory_serialization.cpp")
 
+add_executable(policy1 "src/patterns/Policy_pattern.cpp")
+
+add_executable(decorator1 "src/patterns/decorator.cpp")
+
+
 # tasks
 add_subdirectory("src/tasks")
 
