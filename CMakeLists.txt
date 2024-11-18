@@ -106,6 +106,15 @@ add_executable(policy1 "src/patterns/Policy_pattern.cpp")
 
 add_executable(decorator1 "src/patterns/decorator.cpp")
 
+add_executable(adaptor1 "src/patterns/adapter1.cpp")
+add_executable(adaptor2 "src/patterns/adapter2.cpp")
+
+add_executable(visitor_classic "src/patterns/visitor_classic.cpp")
+add_executable(visitor_compileTime "src/patterns/visitor_compileTime.cpp")
+add_executable(visitor_acyclic "src/patterns/visitor_acyclic.cpp")
+add_executable(visitor_variant "src/patterns/visitor_variant.cpp")
+add_executable(visitor_template "src/patterns/visitor_template.cpp")
+
 
 # tasks
 add_subdirectory("src/tasks")
